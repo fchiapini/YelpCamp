@@ -23,7 +23,7 @@ app.get("/campgrounds", function(req, res) {
 		} else {
 		    res.render("campgrounds/index", {campgrounds: campgrounds});
 		}
-	})
+	});
 });
 
 app.post("/campgrounds", function(req, res) {
