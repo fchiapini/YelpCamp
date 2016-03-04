@@ -9,6 +9,7 @@ var express          = require("express"),
     commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
     seedDB           = require("./seeds.js"),
+    debug            = require("debug")("app"),
     app              = express()
 
 mongoose.connect("mongodb://localhost/yelp_camp");
@@ -17,7 +18,6 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 // seedDB(); //seed the database
-
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
 	secret:            "The internet is awesome!",
@@ -40,5 +40,5 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 app.listen(3000, function() {
-	console.log("The YelpCamp Server Has Started!");
+  debug("The YelpCamp Server Has Started!");
 });
