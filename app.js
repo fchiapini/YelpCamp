@@ -13,16 +13,13 @@ var express          = require("express"),
     flash            = require("connect-flash"),
     app              = express()
 
-//mongoose.connect("mongodb://localhost/yelp_camp");
-//mongoose.connect("mongodb://felipe:felipe@ds023458.mlab.com:23458/camp_database");
-console.log(process.env.DATABASEURL);
 mongoose.connect(process.env.DATABASEURL);
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-// seedDB(); //seed the database
+
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
 	secret:            "The internet is awesome!",
@@ -46,6 +43,6 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(3000, function() {
-  debug("The YelpCamp Server Has Started!");
+app.listen(process.env.PORT, process.env.IP, function() {
+  console.log("The YelpCamp Server Has Started!");
 });
