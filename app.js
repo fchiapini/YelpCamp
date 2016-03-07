@@ -14,7 +14,9 @@ var express          = require("express"),
     app              = express()
 
 //mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://felipe:felipe@ds023458.mlab.com:23458/camp_database");
+//mongoose.connect("mongodb://felipe:felipe@ds023458.mlab.com:23458/camp_database");
+console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL);
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
