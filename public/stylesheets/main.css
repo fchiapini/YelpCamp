@@ -1,5 +1,5 @@
-body {
-	text-align: center;
+.navbar {
+	margin-bottom: 0;
 }
 
 .home-page {
@@ -30,6 +30,10 @@ body {
 	font-family: 'Raleway', sans-serif;
 	margin-bottom: 150px;
 	margin-top: 0;
+}
+
+.header-button {
+	text-align: center;
 }
 
 .thumbnail img {
