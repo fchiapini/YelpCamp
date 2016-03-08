@@ -1,3 +1,7 @@
+body {
+	text-align: center;
+}
+
 .home-page {
 	background: rgba(0, 0, 0, 0) url("/background.jpg") no-repeat fixed center center / cover ;
 	padding-top: 75px;
