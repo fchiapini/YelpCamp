@@ -18,7 +18,6 @@
 .header-text h1{
 	color: #fff;
 	font-size: 100px; 
-	font-weight: 900;
 }
 
 .home-page h2 {
@@ -30,6 +29,7 @@
 	font-family: 'Raleway', sans-serif;
 	margin-bottom: 150px;
 	margin-top: 0;
+	font-weight: 900;
 }
 
 .header-button {
