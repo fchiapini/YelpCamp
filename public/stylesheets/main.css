@@ -1,3 +1,33 @@
+.home-page {
+	background: rgba(0, 0, 0, 0) url("/background.jpg") no-repeat fixed center center / cover ;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	height: 1200px;
+}
+
+.header-text {
+  margin-bottom: 70px;
+  margin-top: 70px;
+  padding:10px;
+}
+
+.header-text h1{
+	color: #fff;
+	font-size: 100px; 
+	font-weight: 900;
+}
+
+.home-page h2 {
+	color: #ffffff;
+	text-transform: capitalize;
+}
+
+.home-page h1,h2 {
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 150px;
+	margin-top: 0;
+}
+
 .thumbnail img {
 	width: 100%;
 }
